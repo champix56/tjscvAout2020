@@ -5,7 +5,7 @@ import TchatReader from '../TchatReader/TchatReader';
 class Tchat extends Component {
   constructor(props){
     super(props);
-    this.state={messages:[{id:1,message:'DEMAT Breizhouz',sender:1}],users:[]};
+    this.state={messages:[{id:1,message:'DEMAT Breizhouz',sender:1},{id:1,message:'DEMAT Breizhouz',sender:2}],users:[]};
 
   }
   render() {
@@ -19,6 +19,6 @@ class Tchat extends Component {
 }
 
 Tchat.propTypes={user:PropTypes.object.isRequired}
-Tchat.defautProps={user:{id:-1,nom:'Anonymous'}}
+Tchat.defautProps={user:{id:1,nom:'Anonymous'}}
 
 export default Tchat;

@@ -7,7 +7,7 @@ const TchatReader = (props) => {
   return (
   <div className={styles.TchatReader} data-testid="TchatReader">
     {props.messages.map(e=>{
-      return <TchatMessage message={e} isMine={props.whoiamID===e.sender}/>
+      return <TchatMessage message={e} isMine={props.whoiamID===e.userId}/>
     })}
   </div>
 );}

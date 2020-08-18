@@ -7,12 +7,6 @@ function App() {
   return (
     <div className="App">
     <Tchat user={{id:1,name:'Alex'}}></Tchat>
-      {/* <Mybutton buttononclick={()=>{
-        console.log('%c%s','font-size:48pt;color:tomato;','button clicked')
-        // confirm()
-      }}>
-        <img alt="logo" src="/img/lambda.png"/>Mon button
-      </Mybutton> */}
     </div>
   );
 }

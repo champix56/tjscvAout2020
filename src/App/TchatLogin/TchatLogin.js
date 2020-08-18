@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 export default class TchatLogin extends Component {
   constructor(props){
     super(props);
@@ -11,7 +11,9 @@ export default class TchatLogin extends Component {
        <h1>Connectez vous</h1>
         id:<input type="text" value={this.state.id} onChange={e=>this.setState({id:e.currentTarget.value})}/><br/>
         name:<input type="text" value={this.state.name}  onChange={e=>this.setState({name:e.currentTarget.value})}/>
-        <br/>{this.props.children}
+        <br/>
+        {/* {this.props.children} */}
+        <Link to="/tchat">Connexion</Link>
       </div>
     );
   }

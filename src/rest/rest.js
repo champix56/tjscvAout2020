@@ -1,7 +1,7 @@
-const ADR_REST_SRV = 'http://localhost:5629';
-//const ADR_REST_SRV='http://86.195.10.30:5629/';
+// const ADR_REST_SRV = 'http://localhost:5629';
+const ADR_REST_SRV='http://86.195.10.30:5629';
 export const getMessages = (callback) => {
-    fetch(ADR_REST_SRV + '/public_messages')
+    fetch(ADR_REST_SRV + '/public_messages?_expand=user')
         .then((fluxReponse) => { return fluxReponse.json() })
         .then((fluxjson) => {
             callback(fluxjson);
@@ -10,7 +10,7 @@ export const getMessages = (callback) => {
 }
 export const getMessagesFrom = (id, callback) => {
     id += 1;
-    fetch(`${ADR_REST_SRV}/public_messages?id_gte=${id}`)
+    fetch(`${ADR_REST_SRV}/public_messages?id_gte=${id}&_sort=id&_expand=user`)
         .then((fluxReponse) => { return fluxReponse.json() })
         .then((fluxjson) => {
             callback(fluxjson);
@@ -24,7 +24,7 @@ export const postMessages = (objet, callback) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.parse(objet)
+            body: JSON.stringify(objet)
         }
     )
         .then((fluxReponse) => { return fluxReponse.json() })

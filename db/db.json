@@ -1,0 +1,40 @@
+{
+  "infosrv": {
+    "nom": "My React Tchat"
+  },
+  "users": [
+    {
+      "id": 1,
+      "name": "Alex",
+      "nickname": "champix"
+    },
+    {
+      "id": 2,
+      "name": "Oumayma",
+      "nickname": "Oumayma"
+    }
+  ],
+  "public_messages": [
+    {
+      "id": 1,
+      "message": "DEMAT breizhouz",
+      "userId": 1,
+      "date": "2020-08-18T09:42:00",
+      "color": "#FF"
+    },
+    {
+      "id": 2,
+      "message": "DEMAT Grand breizhouz",
+      "userId": 2,
+      "date": "2020-08-18T09:43:00",
+      "color": "GREY"
+    },
+    {
+      "id": 3,
+      "message": "DEMAT Grand breizhouz",
+      "userId": 1,
+      "date": "2020-08-18T09:43:00",
+      "color": "BLUE"
+    }
+  ]
+}
